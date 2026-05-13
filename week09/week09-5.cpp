@@ -1,20 +1,26 @@
-/// week09-5.cpp �Q�n��F�Ѥj��p�Ƨ�
 #include <stdio.h>
+
 int main()
-{ /// �}�C��10�ӼƦr
-    int a[10] = {11,22,33,44,55,66,77,88,99,97};
+{
+    // 陣列初始化
+    int a[10] = {11, 22, 33, 44, 55, 66, 77, 88, 99, 97};
 
-    for (int i=0; i<10; i++) printf("%d ", a[i]); ///���@��
-    printf("\n"); /// ����
+    for (int i = 0; i < 10; i++)
+        printf("%d ", a[i]);   // 印出陣列
 
-    for (int i=0; i<10-1; i++) { /// �p��, i < 10-1 ���u-1�v��1
-        if ( a[i] < a[i+1] ) {  ///�Ʊ楪�j�B�k�p,���{�b�u�ϹL�ӡv
-            int temp = a[i]; /// �N�洫
-            a[i] = a[i+1];
-            a[i+1] = temp;
+    printf("\n");
+
+    for (int i = 0; i < 10 - 1; i++) {   // 做回圈
+        if (a[i] < a[i + 1]) {   // 如果前面小於後面
+            int temp = a[i];     // 暫存
+            a[i] = a[i + 1];
+            a[i + 1] = temp;
         }
     }
-    /// �A��}�C�L�@��, �o�{�̤p�� 11 ����̥k��
-    for (int i=0; i<10; i++) printf("%d ", a[i]); ///���@��
-    printf("\n"); /// ����
+
+    // 印出交換後結果
+    for (int i = 0; i < 10; i++)
+        printf("%d ", a[i]);   // 印出陣列
+
+    printf("\n");   // 換行
 }
